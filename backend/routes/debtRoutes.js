@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 const Debt = require('../models/Debt');
-
 router.post('/', async (req, res) => {
     try {
       const { userId, amount, interestRate, dueDate } = req.body;
