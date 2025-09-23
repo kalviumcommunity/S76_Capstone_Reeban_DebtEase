@@ -5,6 +5,8 @@ const connectDB = require('./config/db');
 const debtRoutes = require('./routes/debtRoutes'); // ✅ Import your debt routes
 
 dotenv.config();
+
+// Connect to MongoDB
 connectDB();
 
 const app = express();
@@ -24,6 +26,3 @@ app.use('/api/debts', debtRoutes);
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-mongoose.connect(MONGO_URI);
-
